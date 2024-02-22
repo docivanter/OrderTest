@@ -1,0 +1,14 @@
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.csproj.AssemblyReference.cache
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.AssemblyInfoInputs.cache
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.AssemblyInfo.cs
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.csproj.CoreCompileInputs.cache
+A:\Projects\VS\Orders\Orders.DataAccess\bin\Debug\net8.0\Orders.DataAccess.deps.json
+A:\Projects\VS\Orders\Orders.DataAccess\bin\Debug\net8.0\Orders.DataAccess.runtimeconfig.json
+A:\Projects\VS\Orders\Orders.DataAccess\bin\Debug\net8.0\Orders.DataAccess.dll
+A:\Projects\VS\Orders\Orders.DataAccess\bin\Debug\net8.0\Orders.DataAccess.pdb
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.dll
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\refint\Orders.DataAccess.dll
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.pdb
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\Orders.DataAccess.genruntimeconfig.cache
+A:\Projects\VS\Orders\Orders.DataAccess\obj\Debug\net8.0\ref\Orders.DataAccess.dll

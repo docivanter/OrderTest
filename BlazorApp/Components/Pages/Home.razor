@@ -1,0 +1,81 @@
+﻿@page "/"
+
+@using Microsoft.AspNetCore.Components.Web
+@using Orders.Buisiness.Services.Orders
+@inject OrderService orderService
+@using Orders.DattaAcces.Entities
+@inject NavigationManager NavigationManager
+
+<h3>Edit Order</h3>
+
+@if (selectedOrderId != null)
+{
+    <EditForm Model="@order" OnValidSubmit="UpdateOrder">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label for="Name">Name:</label>
+            <InputText id="Name" @bind-Value="order.Name" class="form-control" />
+            <ValidationMessage For="@(() => order.Name)" />
+        </div>
+
+
+        <h4>Windows</h4>
+        @foreach (var window in order.Windows)
+        {
+            <div class="window-container">
+                <div class="form-group">
+                    <label for="window.Name">Window Name:</label>
+                    <InputText id="window.Name" @bind-Value="window.Name" class="form-control" />
+                </div>
+
+
+                <h5>SubElements</h5>
+                @foreach (var subElement in window.SubElements)
+                {
+                    <div class="subelement-container">
+                        <div class="form-group">
+                            <label for="subElement.Type">Type:</label>
+                            <InputText id="subElement.Type" @bind-Value="subElement.Type" class="form-control" />
+                        </div>
+
+
+                    </div>
+                }
+            </div>
+        }
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </EditForm>
+}
+else
+{
+    
+    <p>Select an Order ID to edit or insert a new order.</p>
+}
+
+@code {
+    private string selectedOrderId = "1";
+    Order order = new Order();
+    private List<string> OrderIds { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        OrderIds = orderService.GetAllOrders().Select(o => o.Id.ToString()).ToList();
+        order = orderService.GetOrderById(1);
+    }
+
+    private async Task UpdateOrder()
+    {
+        if (selectedOrderId != null)
+        {
+            int orderId = int.Parse(selectedOrderId);
+            orderService.UpdateOrder(order);
+        }
+        else
+        {
+            orderService.CreateOrder(order);
+        }
+
+        NavigationManager.NavigateTo("/orders");
+    }
+}
